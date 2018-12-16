@@ -1,0 +1,543 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <title>SpencerCJH 蔡佳昊的个人主页</title>
+    <!-- for-mobile-apps -->
+    <link rel="shortcut icon" href="../static/images/logo.png" type="image/x-icon">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <meta name="keywords" content=""/>
+    <script type="application/x-javascript">
+        let url = window.location.href;
+        if (url.indexOf("https") < 0) {
+            url = url.replace("http:", "https:");
+            window.location.replace(url);
+        }
+        addEventListener("load", function () {
+            setTimeout(hideURLbar, 0);
+        }, false);
+
+        function hideURLbar() {
+            window.scrollTo(0, 1);
+        }
+    </script>
+    <!-- //for-mobile-apps -->
+    <link href="../static/css/bootstrap.css" rel="stylesheet" type="text/css" media="all"/>
+    <link href="../static/css/font-awesome.css" rel="stylesheet">
+    <link href="../static/css/style.css" rel="stylesheet" type="text/css" media="all"/>
+    <!-- js -->
+    <script type="text/javascript" src="../static/js/jquery-2.1.4.min.js"></script>
+    <!-- //js -->
+    <!-- start-smooth-scrolling -->
+    <script type="text/javascript" src="../static/js/move-top.js"></script>
+    <script type="text/javascript" src="../static/js/easing.js"></script>
+    <script type="text/javascript">
+        jQuery(document).ready(function ($) {
+            $(".scroll").click(function (event) {
+                event.preventDefault();
+                $('html,body').animate({scrollTop: $(this.hash).offset().top}, 1000);
+            });
+        });
+    </script>
+    <!-- start-send-message -->
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $("#message_button").click(function () {
+                $.ajax({
+                    type: "POST",
+                    dataType: "json",
+                    url: "/contact",
+                    async: false,
+                    data: $('#my_form').serialize(),
+                    success: function (result) {
+                        console.log(result);
+                        if (result.resultCode === 200) {
+                            alert("发送成功");
+                        } else {
+                            alert(result.message);
+                        }
+                    },
+                    error: function () {
+                        alert("异常！");
+                    }
+                })
+            });
+        });
+    </script>
+</head>
+
+<body>
+<!-- banner -->
+<div class="banner-figures">
+    <div class="banner">
+        <div class="container banner-drop">
+            <div class="header">
+                <div class="header-left logo">
+                    <h1><a href="/">Spencer Cai</a></h1>
+                </div>
+                <div class="header-right">
+                    <nav>
+                        <ul>
+                            <li class="active">
+                                <a href="/" class="active"><span>Home</span></a>
+                            </li>
+                            <li>
+                                <a href="#about" class="scroll"><span>自我介绍</span></a>
+                            </li>
+                            <li>
+                                <a href="#experience" class="scroll"><span>实习经历</span></a>
+                            </li>
+                            <li>
+                                <a href="#award" class="scroll"><span>获奖经历</span></a>
+                            </li>
+                            <li>
+                                <a href="#projects" class="scroll"><span>精选项目</span></a>
+                            </li>
+                            <li>
+                                <a href="#contact" class="scroll"><span>联系我</span></a>
+                            </li>
+                        </ul>
+                    </nav>
+                    <div class="menu-icon animated wow zoomIn" data-wow-duration="1000ms" data-wow-delay="800ms">
+                        <span></span></div>
+                </div>
+                <div class="clearfix"></div>
+            </div>
+            <div class="name">
+                <h2>蔡 佳 昊</h2>
+                <p> Java后端开发 & Android开发</p>
+            </div>
+            <div class="social-icons animated wow bounceInDown" data-wow-duration="1000ms" data-wow-delay="800ms">
+                <ul class="top-links">
+                    <li><a href="https://weibo.com/charmandercjh">
+                        <i class="fa"
+                           style="background: url(../static/images/logo_weibo.png)"></i></a>
+                    </li>
+                    <li><a href="https://blog.csdn.net/weixin_40411846">
+                        <i class="fa"
+                           style="background: url(../static/images/logo_csdn.jpg)"></i></a>
+                    </li>
+                    <li><a href="https://github.com/spencercjh">
+                        <i class="fa"
+                           style="background: url(../static/images/logo_github.png)"></i></a>
+                    </li>
+                    <li><a href="https://gitee.com/spencercjh">
+                        <i class="fa"
+                           style="background: url(../static/images/logo_gitee.png)"></i></a>
+                    </li>
+                    <li><a href="https://www.zhihu.com/people/spencercjh">
+                        <i class="fa"
+                           style="background: url(../static/images/logo_zhihu.png)"></i></a>
+                    </li>
+                    <li><a href="https://www.douban.com/people/spencercjh">
+                        <i class="fa"
+                           style="background: url(../static/images/logo_douban.png)"></i></a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <!--<div class="banner-btm-grid-w3ls">
+            <div class="banner-left-wthree">
+                <img src="../static/images/banner-btm.jpg" alt=" " class="img-responsive">
+                <ul class="address">
+
+                    <li>
+                        <ul class="address-text">
+                            <li><b>姓名</b></li>
+                            <li>蔡 佳 昊</li>
+                        </ul>
+                    </li>
+                    <li>
+                        <ul class="address-text">
+                            <li><b>学校</b></li>
+                            <li>上海海洋大学</li>
+                        </ul>
+                    </li>
+                    <li>
+                        <ul class="address-text">
+                            <li><b>E-MAIL </b></li>
+                            <li><a href="mailto:shouspencercjh@foxmail.com">shouspencercjh@foxmail.com</a></li>
+                        </ul>
+                    </li>
+
+                </ul>
+            </div>
+            <div class="clearfix"></div>
+        </div>-->
+    </div>
+    <script>
+        (function ($) {
+            $(".menu-icon").on("click", function () {
+                $(this).toggleClass("open");
+                $(".container").toggleClass("nav-open");
+                $("nav ul li").toggleClass("animate");
+            });
+
+        })(jQuery);
+    </script>
+
+</div>
+
+<!-- //banner -->
+<!-- about -->
+<div class="about" id="about">
+    <div class="container">
+        <span class="about-top-w3">笨鸟先飞</span>
+        <h4 class="title-w3ls">自我介绍</h4>
+        <h5 class="sub">充实的本科生涯</h5>
+        <p class="para-w3-agile">
+            1998年3月出生；2013年就读上海市实验性示范性高中——上海市宜川中学；2016年高中毕业，
+            考入“双一流”特色农林类院校——上海海洋大学，就读于信息学院计算机科学与技术专业，计划于2020年6月毕业。</p>
+        <p class="para-w3-agile">在校期间成绩优异：截止2018-2019学年秋季学期，
+            GPA：3.49；积极参加计算机专业学术、创新竞赛，已有十余次国家和省市级的获奖和两项软件著作权</p>
+        <p class="para-w3-agile">自2017年7月，开始自学Android开发。后因实习业务的关系开始自学Spring全家桶，从此以后将学习重心逐步转向了后端。 </p>
+        <div class="skills-bar">
+            <span class="about-top-w3">和同龄人相比，各技术相对比较</span>
+            <h4 class="title-w3ls">我的技能</h4>
+            <section class='bar'>
+                <section class='wrap'>
+                    <div class='wrap_right'>
+                        <div class='bar_group'>
+                            <div class='bar_group__bar thin' label='使用IDEA进行Java开发' show_values='true' tooltip='true'
+                                 value='100'></div>
+                            <div class='bar_group__bar thin' label='后端开发' show_values='true' tooltip='true'
+                                 value='95'></div>
+                            <div class='bar_group__bar thin' label='Android开发' show_values='true' tooltip='true'
+                                 value='80'></div>
+                            <div class='bar_group__bar thin' label='服务器使用' show_values='true' tooltip='true'
+                                 value='75'></div>
+                            <div class='bar_group__bar thin' label='Kotlin' show_values='true' tooltip='true'
+                                 value='60'></div>
+                        </div>
+                    </div>
+                    <div class='clear'></div>
+                </section>
+            </section>
+        </div>
+    </div>
+</div>
+<!-- //about -->
+<!--work-experience-->
+<div id="experience" class="experience">
+    <div class="container">
+        <span class="about-top-w3">有幸能在课余时间外出实习</span>
+        <h4 class="title-w3ls">实习经历</h4>
+        <div class="work-info">
+            <div class="col-md-6 work-left">
+                <h4>2018年3月-2018年6月</h4>
+            </div>
+            <div class="col-md-6 work-right">
+                <h5><span class="glyphicon glyphicon-briefcase"> </span>信息安全工程师</h5>
+                <p>参与研发了上海同态信息科技有限公司的核心安全产品和公司专利加密算法的Java实现；参与开发了公司参与的数个外包项目</p>
+            </div>
+            <div class="clearfix"></div>
+        </div>
+        <div class="work-info">
+            <div class="col-md-6 work-right work-right2">
+                <h4>2018年11月-2019年1月</h4>
+            </div>
+            <div class="col-md-6 work-left work-left2">
+                <h5> Java后端开发 <span class="glyphicon glyphicon-briefcase"> </span></h5>
+                <p>利用公司现有代码自动生成技术，为上海计量测试技术研究院开发了一款结合区块链证书认证服务的检定服务管理系统</p>
+            </div>
+            <div class="clearfix"></div>
+        </div>
+    </div>
+</div>
+<!--//work-experience-->
+<!--award-experience-->
+<div id="award" class="experience">
+    <div class="container">
+        <span class="about-top-w3">一分耕耘，一分收获</span>
+        <h4 class="title-w3ls">获奖经历</h4>
+        <div class="work-info">
+            <div class="col-md-6 work-left">
+                <h4>2018年3月31日</h4>
+            </div>
+            <div class="col-md-6 work-right">
+                <h5><span class="glyphicon glyphicon-briefcase"> </span>2018年第三届中国高校计算机大赛-团体程序设计天梯赛</h5>
+                <p>（C/C++大学B组）全国三等奖、上海市二等奖、校一等奖</p>
+            </div>
+            <div class="clearfix"></div>
+        </div>
+        <div class="work-info">
+            <div class="col-md-6 work-right work-right2">
+                <h4>2018年4月1日</h4>
+            </div>
+            <div class="col-md-6 work-left work-left2">
+                <h5>2018年“蓝桥杯”全国软件和信息技术专业人才大赛<span class="glyphicon glyphicon-briefcase"> </span></h5>
+                <p>（C/C++程序设计大学B组）上海市二等奖</p>
+            </div>
+            <div class="clearfix"></div>
+        </div>
+        <div class="work-info">
+            <div class="col-md-6 work-left">
+                <h4>2018年6月</h4>
+            </div>
+            <div class="col-md-6 work-right">
+                <h5><span class="glyphicon glyphicon-briefcase"> </span>2018年上海市大学生计算机应用能力大赛</h5>
+                <p>（程序设计应用组）上海市二等奖<br>【获奖作品：基于安卓的定制化数字课堂考勤考评服务系统】</p>
+            </div>
+            <div class="clearfix"></div>
+        </div>
+        <div class="work-info">
+            <div class="col-md-6 work-right work-right2">
+                <h4>2018年8月16日</h4>
+            </div>
+            <div class="col-md-6 work-left work-left2">
+                <h5>2018年中国大学生计算机设计大赛<span class="glyphicon glyphicon-briefcase"> </span></h5>
+                <p>（软件应用与开发类）全国三等奖<br>【获奖作品：基于安卓的定制化数字课堂考勤考评服务系统】</p>
+            </div>
+            <div class="clearfix"></div>
+        </div>
+        <div class="work-info">
+            <div class="col-md-6 work-left">
+                <h4>2018年8月21日</h4>
+            </div>
+            <div class="col-md-6 work-right">
+                <h5><span class="glyphicon glyphicon-briefcase"> </span>2项计算机软件著作权</h5>
+                <p>优质河蟹评比App（2018SR665226）；<br>优质河蟹评比系统（2018SR660096）</p>
+            </div>
+            <div class="clearfix"></div>
+        </div>
+    </div>
+</div>
+<!--//award-experience-->
+<div class="tlinks">Collect from <a href="http://www.cssmoban.com/">手机网站模板</a></div>
+<!-- projects -->
+<div class="projects" id="projects">
+    <div class="container">
+        <span class="about-top-w3">The best of my projects </span>
+        <h4 class="title-w3ls">精选个人项目(不包括商业项目)</h4>
+        <div class="news-bottom">
+            <div class="news-one-wthree-agile" id="firstProject">
+                <div class="col-md-6 news-left">
+                    <div class="biseller-column">
+                        <a class="lightbox" href="#one">
+                            <img src="../static/images/p1.jpg" alt=""/>
+                        </a>
+                        <div class="lightbox-target" id="one">
+                            <img src="../static/images/p1.jpg" alt=""/>
+                            <p class="pop">
+                                码云项目地址:<a href="https://gitee.com/spencercjh/myHtmlToPdfImage">https://gitee.com/spencercjh/myHtmlToPdfImage</a>
+                                <br>
+                                github项目地址:<a href="https://github.com/spencercjh/htmlToPdf">https://github.com/spencercjh/htmlToPdf</a>
+                            </p>
+                            <a class="lightbox-close" href="#firstProject"> </a>
+                            <div class="clearfix"></div>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="col-md-6 news-right">
+                    <a href="#one"><h4>网页转PDF和图片</h4></a>
+                    <span class="about-top-w3">2018年12月 Spring Boot</span>
+                    <p class="para-w3-agile">
+                        已用于计量院项目中的设备证书生成和导出。项目参考自https://github.com/petterobam/my-html2file，修正其不能在linux内正常使用的问题（原项目的LinuxPath并不正确），
+                        并使用Apache PdfBox将生成出来的PDF文件转化为PNG图片，以解决用wkhtmltoimage生成出来的图片过大的问题。
+                        即通过转PDF省去一步图片压缩的任务，而PDF又正好是业务需要的。核心逻辑是使用字符串拼接代码，帮助用户拼接wkhtmltopdf需要的参数指令，
+                        避免不必要的麻烦。</p>
+                </div>
+                <div class="clearfix"></div>
+            </div>
+            <div class="news-one-wthree-agile" id="secondProject">
+                <div class="col-md-6 news-right">
+                    <a href="#three"><h4>对"高校体育"App的伪造请求服务</h4></a>
+                    <span class="about-top-w3">2018年10月 Spring Boot</span>
+                    <p class="para-w3-agile">《高校体育》是一款上海市教委或者更高的上级教育部门推广的，为敦促广大高校学生积极锻炼用的类似于KEEP的跑步App。
+                        其后端实现存在诸多问题：使用HTTP，App端代码混淆薄弱，数据加密方式低级，不校验用户身份，没有校方管理后台，跑步记录校验薄弱等。
+                        故可以进行接口的伪造访问，达到一键跑步的目的。</p>
+                </div>
+                <div class="col-md-6 news-left">
+                    <div class="biseller-column">
+                        <a class="lightbox" href="#three">
+                            <img src="../static/images/p2.jpg" alt=""/>
+                        </a>
+                        <div class="lightbox-target" id="three">
+                            <img src="../static/images/p2.jpg" alt=""/>
+                            <p class="pop">
+                                码云项目地址:<a href="https://gitee.com/spencercjh/gxhttpapitest">https://gitee.com/spencercjh/gxhttpapitest</a>
+                                <br>
+                                github项目地址:<a href="https://github.com/spencercjh/FakeCallOnApi">https://github.com/spencercjh/FakeCallOnApi</a>
+                            </p>
+                            <a class="lightbox-close" href="#secondProject"> </a>
+
+                            <div class="clearfix"></div>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="clearfix"></div>
+            </div>
+            <div class="news-one-wthree-agile" id="thirdProject">
+                <div class="col-md-6 news-left">
+                    <div class="biseller-column">
+                        <a class="lightbox" href="#two">
+                            <img src="../static/images/p3.jpg" alt=""/>
+                        </a>
+                        <div class="lightbox-target" id="two">
+                            <img src="../static/images/p3.jpg" alt=""/>
+                            <p class="pop">
+                                码云App项目地址:<a href="https://gitee.com/spencercjh/CrabScore2">https://gitee.com/spencercjh/CrabScore2</a>
+                                <br>
+                                githubApp项目地址:<a href="https://github.com/spencercjh/CrabScoreMVP">https://github.com/spencercjh/CrabScoreMVP</a>
+                                <br>
+                                码云后端项目地址:<a href="https://gitee.com/spencercjh/crabscore">https://gitee.com/spencercjh/crabscore</a>
+                                <br>
+                                github后端项目地址:<a href="https://github.com/spencercjh/crabscore_springboot">https://github.com/spencercjh/crabscore_springboot</a>
+                            </p>
+                            <a class="lightbox-close" href="#thirdProject"> </a>
+                            <div class="clearfix"></div>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="col-md-6 news-right">
+                    <a href="#two"><h4>基于Spring Boot和MVP架构的特色河蟹大赛评比管理系统</h4></a>
+                    <span class="about-top-w3">2018年10月 Spring Boot+Android</span>
+                    <p class="para-w3-agile">本项目计划参加2019年上海市大学生计算机应用能力大赛并和后端项目一起作为我的毕业论文主题。
+                        前端采用MVP架构的Android App，开发流程规范，便捷，实现了组件、业务的可拓展和良好的层次结构；
+                        使用时下官方最新的Material Design的多个组件以及OkHttp、Glide等主流Android框架实现快速高效开发。
+                        后端采用RESTFUL API风格的Spring
+                        Boot，使用JWT和AES加密限制请求的恶意伪造，防止用户跨用户组操作；全部Api都接入swagger，方便测试与维护；
+                        接入网易云短信服务实现用户登录和注册的手机校验；
+                        接入七牛云对象存储实现App的图文并茂。
+                    </p>
+                </div>
+                <div class="clearfix"></div>
+            </div>
+
+            <div class="news-one-wthree-agile" id="fourthProject">
+                <div class="col-md-6 news-right">
+                    <a href="#four"><h4>基于安卓的定制化数字课堂考勤考评服务系统</h4></a>
+                    <span class="about-top-w3">2017年12月 Android+Servlet</span>
+                    <p class="para-w3-agile">本项目是我自学Android后开发的第一款App。技术简陋，前后端代码冗余程度高，不易维护，故在2018年5月以后就停止了更新。
+                        项目为解决本科课堂规模较大而导致的教师与学生不够熟悉的问题，
+                        教师能够一键了解当前课堂出勤学生的数量和详细信息，
+                        能够根据教室座位图对出勤的学生进行快速评价，能够方便地维护所有的课堂记录。
+                        项目荣获2018年上海市大学生计算机应用能力大赛（程序设计应用组）上海市二等奖；2018年中国大学生计算机设计大赛（软件应用与开发类）全国三等奖。
+                    </p>
+                </div>
+                <div class="col-md-6 news-left">
+                    <div class="biseller-column">
+                        <a class="lightbox" href="#four">
+                            <img src="../static/images/p4.jpg" alt=""/>
+                        </a>
+                        <div class="lightbox-target" id="four">
+                            <img src="../static/images/p4.jpg" alt=""/>
+                            <p class="pop">
+                                码云项目地址:<a href="https://gitee.com/spencercjh/iClass">https://gitee.com/spencercjh/gxhttpapitest</a>
+                                <br>
+                                github项目地址:<a href="https://github.com/spencercjh/iClass">https://github.com/spencercjh/FakeCallOnApi</a>
+                            </p>
+                            <a class="lightbox-close" href="#fourthProject"> </a>
+
+                            <div class="clearfix"></div>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="clearfix"></div>
+            </div>
+            <!--<div class="news-one-wthree-agile">
+                <div class="col-md-6 news-left">
+                    <div class="biseller-column">
+                        <a class="lightbox" href="#five">
+                            <img src="../static/images/p5.jpg" alt=""/>
+                        </a>
+                        <div class="lightbox-target" id="five">
+                            <img src="../static/images/p5.jpg" alt=""/>
+                            <p class="pop">Duis bibendum pellentesque nisi eget volutpat. Nunc rhoncus ultrices
+                                lectus.Aliquam eu dui quis orci ultrices eleifend ut non massa.non suscipit leo
+                                fringilla non suscipit leo fringilla molestie</p>
+                            <a class="lightbox-close" href="#"> </a>
+
+                            <div class="clearfix"></div>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="col-md-6 news-right">
+                    <a href="#five"><h4>Simple Design</h4></a>
+                    <p class="para-w3-agile">Duis bibendum pellentesque nisi eget volutpat. Nunc rhoncus ultrices
+                        lectus.Aliquam eu dui quis orci ultrices eleifend ut non massa. Duis commodo, ante in vulputate
+                        iaculis, libero ex fringilla dolor id laoreet augue. Maecenas dui diam, pellentesque et.</p>
+                </div>
+                <div class="clearfix"></div>
+            </div>-->
+            <div class="clearfix"></div>
+        </div>
+    </div>
+</div>
+<!-- //projects -->
+<!-- contact -->
+<div class="contact" id="contact" style="background: linear-gradient(to top,#029CF5,#15EDED);">
+    <div class="container">
+        <span class="about-top-w3">直接发到我的微信</span>
+        <h4 class="title-w3ls">Contact Me</h4>
+        <div class="col-md-5 contact-agileits-w3layouts">
+            <form id="my_form">
+                <input type="text" name="name" placeholder="Name" required="" id="name"/>
+                <textarea name="message" placeholder="Message" required="" id="message"></textarea>
+                <input id="message_button" type="button" value="发送消息"/>
+            </form>
+            <h5 class="sub">或者给我发电子邮件</h5>
+            <p><span>Email</span><a href="mailto:shouspencercjh@foxmail.com"> shouspencercjh@foxmail.com</a></p>
+        </div>
+
+
+        <div class="col-md-7 contact-map-right">
+            <div id="map"></div>
+
+            <!-- Map-JavaScript -->
+            <!---<script type="text/javascript" src="https://maps.googleapis.com/maps/api/js"></script>
+            <script type="text/javascript">
+                google.maps.event.addDomListener(window, 'load', init);
+                function init() {
+                    var mapOptions = {
+                        zoom: 11,
+                        center: new google.maps.LatLng(40.6700, -73.9400),
+                        styles: [{"featureType":"all","elementType":"labels.text.fill","stylers":[{"saturation":36},{"color":"#000000"},{"lightness":40}]},{"featureType":"all","elementType":"labels.text.stroke","stylers":[{"visibility":"on"},{"color":"#000000"},{"lightness":16}]},{"featureType":"all","elementType":"labels.icon","stylers":[{"visibility":"off"}]},{"featureType":"administrative","elementType":"geometry.fill","stylers":[{"color":"#000000"},{"lightness":20}]},{"featureType":"administrative","elementType":"geometry.stroke","stylers":[{"color":"#000000"},{"lightness":17},{"weight":1.2}]},{"featureType":"landscape","elementType":"geometry","stylers":[{"color":"#000000"},{"lightness":20}]},{"featureType":"poi","elementType":"geometry","stylers":[{"color":"#000000"},{"lightness":21}]},{"featureType":"road.highway","elementType":"geometry.fill","stylers":[{"color":"#000000"},{"lightness":17}]},{"featureType":"road.highway","elementType":"geometry.stroke","stylers":[{"color":"#000000"},{"lightness":29},{"weight":0.2}]},{"featureType":"road.arterial","elementType":"geometry","stylers":[{"color":"#000000"},{"lightness":18}]},{"featureType":"road.local","elementType":"geometry","stylers":[{"color":"#000000"},{"lightness":16}]},{"featureType":"transit","elementType":"geometry","stylers":[{"color":"#000000"},{"lightness":19}]},{"featureType":"water","elementType":"geometry","stylers":[{"color":"#000000"},{"lightness":17}]}]
+                    };
+                    var mapElement = document.getElementById('map');
+                    var map = new google.maps.Map(mapElement, mapOptions);
+                    var marker = new google.maps.Marker({
+                        position: new google.maps.LatLng(40.6700, -73.9400),
+                        map: map,
+                    });
+                }
+            </script>--->
+            <!-- //Map-JavaScript -->
+
+        </div>
+    </div>
+</div>
+<!-- //about -->
+
+<div class="footer">
+    <div class="container">
+        <p>Copyright &copy; 2018.Personal All rights reserved.沪ICP备18013814号-1</p>
+    </div>
+</div>
+<!-- //footer -->
+<script src="../static/js/bars.js"></script>
+
+<!-- here stars scrolling icon -->
+<script type="text/javascript">
+    $(document).ready(function () {
+        /*
+            var defaults = {
+            containerID: 'toTop', // fading element id
+            containerHoverID: 'toTopHover', // fading element hover id
+            scrollSpeed: 1200,
+            easingType: 'linear'
+            };
+        */
+
+        $().UItoTop({easingType: 'easeOutQuart'});
+
+    });
+</script>
+<!-- //here ends scrolling icon -->
+</body>
+</html>

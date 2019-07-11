@@ -1,0 +1,9 @@
+version: "3"
+services:
+  test:
+    build:
+      context: .
+    ports:
+      - "443:443"
+    volumes:
+      -  D:\\programe:/logs
